@@ -1,5 +1,53 @@
 # Nimble DB
  Nimble-DB is a simple and fast object storage for Android (Java/Kotlin objects)
+ 
+## Download
+``` gradle
+implementation 'com.karen.nimbledb:nimbledb:1.0.0'
+```
+## Usage
+First of all, call this method in Application.onCreate (UI thread)
+``` kotlin
+Nimble.initialize(context)
+```
+### Sections
+You can either use default section
+``` kotlin 
+Nimble.on()
+```
+Or your custom section
+``` kotlin
+Nimble.on("YOUR SECTION NAME")
+```
+### Put
+Its very easy to put any object
+``` kotlin
+Nimble.on().put("YOUR KEY", data)
+```
+### Get
+Getting is simple and easy as well as putting 
+``` kotlin
+val data = Nimble.on().get("YOUR_KEY")
+```
+In addition, you can get all keys of any section
+``` kotlin
+val allKeys - Nimble.on().allKeys
+```
+### Remove
+You can remove with exact key
+``` kotlin
+Nimble.on().remove("YOUR_KEY")
+```
+Or you can remova all obects
+``` kotlin
+Nimble.on().removeAll()
+```
+### Other features
+To check if object exists or not you should call
+``` kotlin
+val objectExists = Nimble.on().exists("key")
+```
+
 
 ```
 Copyright 2020 Karen Gozeyan
