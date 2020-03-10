@@ -1,0 +1,2 @@
+include ':app', ':nimbledb'
+rootProject.name='Nimble'
