@@ -47,7 +47,7 @@ To check if object exists or not you should call
 ``` kotlin
 val objectExists = Nimble.on().exists("key")
 ```
-
+## License
 
 ```
 Copyright 2020 Karen Gozeyan
