@@ -1,7 +1,7 @@
 # Nimble DB
  Nimble-DB is a simple and fast object storage for Android (Java/Kotlin objects)
 
-```
+``` license
    Copyright [2020] Karen Gozeyan
 
    Licensed under the Apache License, Version 2.0 (the "License");
