@@ -1,2 +1,2 @@
-include ':app', ':nimbledb'
+include ':app', ':nimbledb', ':nimbledb-lru'
 rootProject.name='Nimble'

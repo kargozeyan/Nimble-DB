@@ -7,13 +7,13 @@ apply plugin: 'com.github.dcendents.android-maven'
 
 ext {
     bintrayRepo = "NimbleDB"
-    bintrayName = "com.karen.nimbledb"
+    bintrayName = "com.karen.nimbledb-lru"
 
-    publishedGroupId = 'com.karen.nimbledb'
-    libraryName = 'nimbledb'
-    artifact = 'nimbledb'
+    publishedGroupId = 'com.karen.nimbledb-lru'
+    libraryName = 'nimbledb-lru'
+    artifact = 'nimbledb-lru'
 
-    libraryDescription = 'Nimble-DB is a simple and fast object storage for Android (Java/Kotlin objects)'
+    libraryDescription = 'Nimble-DB with lru is another version of standard Nimble-DB'
 
     siteUrl = 'https://github.com/kargoz/Nimble-DB'
     gitUrl = 'https://github.com/kargoz/Nimble-DB.git'
@@ -64,7 +64,6 @@ dependencies {
 
     implementation 'com.esotericsoftware:kryo:5.0.0-RC5'
 }
-
 repositories {
     mavenCentral()
 }
