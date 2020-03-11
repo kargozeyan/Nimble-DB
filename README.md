@@ -6,7 +6,7 @@
 implementation 'com.karen.nimbledb:nimbledb:1.0.0'
 ```
 ## Usage
-First of all, call this method in Application.onCreate (UI thread)
+First of all, call this method in `Application.onCreate` (UI thread)
 ``` kotlin
 Nimble.initialize(context)
 ```
@@ -31,7 +31,7 @@ val data = Nimble.on().get("YOUR_KEY")
 ```
 In addition, you can get all keys of any section
 ``` kotlin
-val allKeys - Nimble.on().allKeys
+val allKeys = Nimble.on().allKeys
 ```
 ### Remove
 You can remove with exact key
@@ -47,6 +47,10 @@ To check if object exists or not you should call
 ``` kotlin
 val objectExists = Nimble.on().exists("key")
 ```
+### Threading 
+- `Nimble.initialize()` should be called only in UI thread
+- Other methods are thread safe and can be called in other Threads also
+
 ## License
 
 ```
