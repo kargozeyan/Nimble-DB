@@ -5,7 +5,8 @@
  
 ## Download
 ``` gradle
-implementation 'com.karen.nimbledb:nimbledb:1.0.0'
+implementation 'com.karen.nimbledb:nimbledb:1.1.0' // Standard version
+implementation 'com.karen.nimbledb-lru:nimbledb-lru:1.0.0' // Lru version
 ```
 ## Usage
 First of all, call this method in `Application.onCreate` (UI thread)
@@ -52,7 +53,9 @@ val objectExists = Nimble.on().exists("key")
 ### Threading 
 - `Nimble.initialize()` should be called only in UI thread
 - Other methods are thread safe and can be called in other Threads also
-
+## Lru Version
+This version also uses `LruCache`
+At first when you call `get()` method it would take some time, but then after that the data is kept in `LruCache`, so it takes no time to get object. 
 ## License
 
 ```
