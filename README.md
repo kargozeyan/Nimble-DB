@@ -1,6 +1,8 @@
 # Nimble DB
  Nimble-DB is a simple and fast object storage for Android (Java/Kotlin objects)
  
+ Nimble-DB uses [Kryo](https://github.com/EsotericSoftware/kryo) for objects serialization and deserialization
+ 
 ## Download
 ``` gradle
 implementation 'com.karen.nimbledb:nimbledb:1.0.0'
