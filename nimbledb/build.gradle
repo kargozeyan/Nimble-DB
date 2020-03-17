@@ -18,7 +18,7 @@ ext {
     siteUrl = 'https://github.com/kargoz/Nimble-DB'
     gitUrl = 'https://github.com/kargoz/Nimble-DB.git'
 
-    libraryVersion = '1.1.0'
+    libraryVersion = '1.2.0'
 
     developerId = 'kgozeyan'
     developerName = 'Karen Gozeyan'

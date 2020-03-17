@@ -2,7 +2,7 @@ package com.karen.nimbledb
 
 import android.content.Context
 
-class NimbleOn internal constructor(name: String, context: Context) {
+class NimbleSection internal constructor(name: String, context: Context) {
     private var dir = NimpleDir(name, context)
 
     fun <T : Any> put(key: String, value: T) {
@@ -11,8 +11,17 @@ class NimbleOn internal constructor(name: String, context: Context) {
     }
 
     fun <T : Any> get(key: String): T {
-        val storage: NimbleStorage<T> = dir.get<T>(key) as NimbleStorage<T>
+        val storage = dir.get<T>(key) as NimbleStorage<T>
         return storage.data
+    }
+
+    fun <T : Any> get(key: String, default: T): T {
+        val storage = dir.get<Any>(key)
+        return if (storage != null) {
+            (storage as NimbleStorage<T>).data
+        } else {
+            default
+        }
     }
 
     fun remove(key: String) {

@@ -13,14 +13,14 @@ public class Nimble {
         context = _context.getApplicationContext();
     }
 
-    public static NimbleOn on() {
+    public static NimbleSection on() {
         return on(DEF_PATH);
     }
 
-    public static NimbleOn on(String name) {
+    public static NimbleSection on(String name) {
         if (context == null) {
             throw new RuntimeException("context is null, please call initialize method");
         }
-        return new NimbleOn(name, context);
+        return new NimbleSection(name, context);
     }
 }
